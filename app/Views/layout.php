@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/font-awesome.min.css') ?>">
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -36,10 +37,10 @@
 						<li <?= ($w_current_route == 'security_register') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('security_register'); ?>">Inscription</a></li>
 					<?php } ?>
 				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
+			</div>
+		</div>
 	</nav>
-	<div class="container">
+	<div class="container-fluid">
 		<header>
 			<h1>W :: <?= $this->e($title) ?></h1>
 		</header>
@@ -47,9 +48,27 @@
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
+	</div>
 
 		<footer>
+			<br/><br/><br/>
+			<div class="col-md-3 col-md-offset-1">
+	        <p>&copy;opyright FlyEat 2017</p>
+	      </div>
+	      <div class="col-md-4">
+	      	<p>Informations : <a href="tel:+33320651201">03.20.65.12.01</a> & <a href="tel:+33783489480">07.83.48.94.80</a></p>
+	      </div>
+	      <div class="col-md-4 logo">
+	      	<ul class="list-inline">
+	      		<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+	      		<li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+	      		<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+	      		<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+	      	</ul>
+	      </div>
+	      <div>
+	      	
+	      </div>
 		</footer>
-	</div>
 </body>
 </html>
