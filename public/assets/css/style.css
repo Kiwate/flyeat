@@ -4,10 +4,6 @@ html, body {
 	color: #F8F8F2;
 }
 
-.container {
-	margin: 50px;
-}
-
 a {
 	text-decoration: none;
 	color: #A6E22E;
@@ -23,4 +19,28 @@ h1 {
 
 h2 {
 	color: #66D9EF;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	color: #FFF;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #C3C3C3;
+}
+
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
 }

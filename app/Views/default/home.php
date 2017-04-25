@@ -1,7 +1,56 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-	<h2>Let's code.</h2>
-	<p>Vous avez atteint la page d'accueil. Bravo.</p>
-	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
+<article class="container-fluid">
+	<!-- Trait de séparation -->
+	<figure><img src=""></figure>
+
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2">
+			<h2>At vero eos :</h2>
+			<br/>
+			<p>"Lorem ipsum dolor sit amet, consecletur adipiscing elit, sed do elusmod tempor incidunt ut labore et dolore magna alique."</p>
+			<br/>
+			<button class="btn btn-default">Lire la suite</button>
+		</div>
+		<div class="col-md-6">
+			<figure class="img-responsive">
+				<img src="">
+			</figure>
+		</div>
+	</div>
+
+	<!-- Image entre les deux articles -->
+	<figure>
+		<img src="">
+	</figure>
+</article>
+
+<article class="container-fluid">
+	<!-- Trait de séparation -->
+	<figure><img src=""></figure>
+
+	<div class="text-center">
+		<h2>Nous livrons chez vous :</h2>
+		<br/>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed da eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+	</div>
+
+	<!-- Images superposées -->
+	<figure>
+		<img src="">
+	</figure>
+	<figure>
+		<img src="">
+	</figure>
+	<figure>
+		<img src="">
+	</figure>
+
+	<!-- Image de gauche -->
+	<figure>
+		<img src="">
+	</figure>
+	
+</article>
 <?php $this->stop('main_content') ?>
