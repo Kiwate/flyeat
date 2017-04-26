@@ -19,5 +19,10 @@ class DefaultController extends Controller
 	{
 		$this->show('default/contact');
 	}
+	
+	public function panier()
+	{
+		$this->show('default/panier');
+	}
 
 }

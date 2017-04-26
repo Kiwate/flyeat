@@ -29,7 +29,7 @@
 						  <li <?= ($w_current_route == 'default_home') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_home'); ?>">Accueil</a></li>
 					      <li><a href="#">Services</a></li>						
 						  <li <?= ($w_current_route == 'default_contact') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_contact'); ?>">Contact</a></li>
-					      <li class="pull-right"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+					      <li class="pull-right"><?= ($w_current_route == 'default_panier') ? 'class="active"' : ''; ?><a href="<?php echo $this->url('default_panier'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 					    </ul>
 					</div>
 				</div>
