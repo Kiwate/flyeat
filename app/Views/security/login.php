@@ -4,8 +4,8 @@
 
     <form action="" method="POST">
         <div class="form-group">
-            <label>Votre pseudo ou votre email :</label>
-            <input id="username" name="username" class="form-control" type="text">
+            <label>Votre email :</label>
+            <input id="email" name="email" class="form-control" type="text">
         </div>
         <div class="form-group">
             <label>Votre mot de passe :</label>

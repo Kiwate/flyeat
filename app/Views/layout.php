@@ -25,7 +25,7 @@
 
 					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					    <ul class="nav navbar-nav">
-					      <li class="pull-left" ><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+					      <li class="pull-left" ><a href="<?php echo $this->url('security_register'); ?>"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 						  <li <?= ($w_current_route == 'default_home') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_home'); ?>">Accueil</a></li>
 					      <li><a href="#">Services</a></li>						
 						  <li <?= ($w_current_route == 'default_contact') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_contact'); ?>">Contact</a></li>
@@ -34,21 +34,6 @@
 					</div>
 				</div>
 			</nav>
-
-			<div class="container text-center search">
-			<figure><img src=""></figure>
-			
-				<form class="navbar-form" role="search">
-				  <div class="form-group">
-				    <input type="text" class="form-control" placeholder="Recherche">
-				  </div>
-				  <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
-				</form>
-			</div>
-
-			<!-- Image en position Absolute -->
-			<img src="">
-			<img src="">
 
 		</header>
 

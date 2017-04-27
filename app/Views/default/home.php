@@ -1,7 +1,23 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
+
+
 <article class="container-fluid">
+<div class="container text-center search">
+	<figure><img src=""></figure>
+			
+	<form class="navbar-form" role="search">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Recherche">
+		</div>
+		<button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+	</form>
+</div>
+
+			<!-- Image en position Absolute -->
+			<img src="">
+			<img src="">
 	<!-- Trait de séparation -->
 	<figure><img src=""></figure>
 

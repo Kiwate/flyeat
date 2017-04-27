@@ -9,11 +9,11 @@ a {
 	color: #A6E22E;
 }
 
-header {
-	height: 650px;
+article .search{
+	height: 600px;
 }
 
-header .search {
+.search form{
 	position: relative;
 	top: 50%;
 }

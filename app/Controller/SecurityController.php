@@ -13,11 +13,11 @@ class SecurityController extends Controller
     public function login()
     {
         if (!empty($_POST)) {
-            $username = $_POST['username'];
+            $email = $_POST['email'];
             $password = $_POST['password'];
             $auth_manager = new \W\Security\AuthentificationModel();
 
-            $user_id = $auth_manager->isValidLoginInfo($username, $password);
+            $user_id = $auth_manager->isValidLoginInfo($email, $password);
             if ($user_id) { // Si le couple username/password est valid
                 $user_manager = new UserModel();
                 $user = $user_manager->find($user_id); // Récupére toutes les infos de l'utilisateur qui se connecte
@@ -37,23 +37,28 @@ class SecurityController extends Controller
     public function register()
     {
         $messages = '';
-        $username = '';
+        $firstname = '';
         $email = '';
 
         // Traitement du formulaire d'inscription
         if (!empty($_POST)) {
-            $username = trim($_POST['username']); // On peut se passer de addslashes car avec PDO on fait une requête préparé
+            $firstname = trim($_POST['firstname']); // On peut se passer de addslashes car avec PDO on fait une requête préparé
+            $lastname = trim($_POST['lastname']);
             $email = trim($_POST['email']);
+            $adress = trim($_POST['adress']);
+            $city = trim($_POST['city']);
+            $postal = trim($_POST['postal']);
+            $phone = trim($_POST['phone']);
             $password = trim($_POST['password']);
             $cfpassword = trim($_POST['cfpassword']);
             $user_manager = new UserModel();
             $errors = [];
-            // On vérifie si l'email ou le username existent déjà en BDD
-            if ( $user_manager->emailExists($email) || $user_manager->usernameExists($username) ) {
-                $errors['exists'] = "L'email ou l'username existent."; // Equivalent du array_push($array, $data)
+            // On vérifie si l'email existe déjà en BDD
+            if ( $user_manager->emailExists($email)) {
+                $errors['exists'] = "L'email existe."; // Equivalent du array_push($array, $data)
             }
-            if ( empty($username) || !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
-                $errors['username'] = "L'email ou username sont vides ou non valides.";
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errors['email'] = "L'email est vide ou non valide.";
             }
             if ( $password !== $cfpassword ) {
                 $errors['password'] = "Les mots de passe ne correspondent pas";
@@ -63,10 +68,16 @@ class SecurityController extends Controller
                 $auth_manager = new \W\Security\AuthentificationModel(); // J'instancie le authentificationmodel qui facilite la gestion de l'authentification des utilisateurs
                 // S'il n'y a pas d'erreurs, on inscrit l'utilisateur en base de données
                 $user_manager->insert([
-                    'username' => $username,
+                    'firstname' => $firstname,
+                    'lastname' => $lastname,
+                    'email' => $email,
+                    'adress' => $adress,
+                    'city' => $city,
+                    'postal' => $postal,
+                    'phone' => $phone,
                     'email' => $email,
                     'password' => $auth_manager->hashPassword($password),
-                    'role' => 'admin'
+                    'role' => 'user'
                 ]);
 
                 $messages = ['success' => 'Vous êtes bien inscrit.'];
@@ -77,7 +88,7 @@ class SecurityController extends Controller
 
         }
 
-        $this->show( 'security/register', [ 'messages' => $messages, 'username' => $username, 'email' => $email ] );
+        $this->show( 'security/register', [ 'messages' => $messages, 'firstname' => $firstname, 'email' => $email ] );
     }
 
     /**
