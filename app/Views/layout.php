@@ -35,12 +35,12 @@
 				</div>
 			</nav>
 
-			<div class="container text-center">
+			<div class="container text-center search">
 			<figure><img src=""></figure>
 			
 				<form class="navbar-form" role="search">
 				  <div class="form-group">
-				    <input type="text" class="form-control" placeholder="Search">
+				    <input type="text" class="form-control" placeholder="Recherche">
 				  </div>
 				  <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>

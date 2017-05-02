@@ -1,12 +1,21 @@
 html, body {
 	font-family: Consolas, monaco, monospace;
-	background-color: #272822;
-	color: #F8F8F2;
+	background-color: #f7efdd;
+	color: #000;
 }
 
 a {
 	text-decoration: none;
 	color: #A6E22E;
+}
+
+header {
+	height: 650px;
+}
+
+header .search {
+	position: relative;
+	top: 50%;
 }
 
 a:hover {
@@ -32,15 +41,35 @@ h2 {
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-	color: #FFF;
+	color: #666;
 	background-color: transparent;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #C3C3C3;
+	color: #999;
 }
 
 .navbar-nav > li {
   float: none;
   display: inline-block;
+}
+
+.search input {
+	margin-right:-9px;
+	border-radius: 0;
+}
+
+.search button {
+	border-radius: 0;
+	background-color: #777366;
+	color: #FFF;
+}
+
+.search button:hover, .search button:active, .search button:focus {
+	background-color: #444;
+	color: #FFF;
+}
+
+.search button:focus {
+		border:0;
 }
