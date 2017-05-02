@@ -2,6 +2,8 @@
 
 <?php $this->start('main_content'); ?>
 
+<?php  var_dump($w_user); ?>
+
     <form action="" method="POST">
         <div class="form-group">
             <label>Votre email :</label>
@@ -13,5 +15,7 @@
         </div>
         <button class="btn btn-submit">Se connecter</button>
     </form>
+
+    <div class="text-center"><p>Pas de compte ? <a href="<?php echo $this->url('security_register'); ?>">Inscrivez vous.</a></p></div>
 
 <?php $this->stop('main_content'); ?>
