@@ -35,13 +35,12 @@
 						  <li <?= ($w_current_route == 'default_contact') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_contact'); ?>">Contact</a></li>
 					      <li class="pull-right"><a href="#">Panier <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 					      <?php if ($w_user['role'] === 'admin') { ?>
-						  <li class="pull-right"><a href="<?php echo $this->url('back_gestion'); ?>">Gestion</a></li>
+						  <li class="pull-right"><a href="<?php echo $this->url('menus_gestion'); ?>">Gestion</a></li>
 						  <?php } ?>
 					    </ul>
 					</div>
 				</div>
 			</nav>
-			<?php  var_dump($w_user); ?>
 		</header>
 
 		<section>

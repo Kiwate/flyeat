@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Liste des utilisateurs']); ?>
 
 <?php $this->start('main_content'); ?>
-    <a href="<?php echo $this->url( 'back_gestion'); ?>" class="btn btn-warning">Retour Gestion</a>
+    <a href="<?php echo $this->url( 'menus_gestion'); ?>" class="btn btn-warning">Retour Gestion</a>
     <table class="table table-striped">
         <thead>
             <tr>

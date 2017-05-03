@@ -7,8 +7,8 @@
         <ul class="nav nav-pills nav-stacked">
           <li class="active"><a href="#">Gestion</a></li>
           <li><a href="<?php echo $this->url('security_index'); ?>">Gestion Utilisateurs</a></li>
-          <li><a href="#">Gestion Menus</a></li>
-          <li><a href="#">Voir les Commandes</a></li>
+          <li><a href="<?= $this->url('menus_index'); ?>">Gestion Menus</a></li>
+          <li><a href="<?= $this->url('commands_index'); ?>">Voir les Commandes</a></li>
         </ul>
     </div>
 </div>
