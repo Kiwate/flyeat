@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/font-awesome.min.css') ?>">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 </head>
 <body>
 
@@ -26,46 +27,49 @@
 					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					    <ul class="nav navbar-nav">
 					<?php if ($w_user) { // si l'utilisateur est connecté ?>
-					      <li class="pull-left <?= ($w_current_route == 'security_logout') ? 'active' : ''; ?>"><a href="<?php echo $this->url('security_logout'); ?>"><i class="fa fa-user" aria-hidden="true"></i> Déconnexion</a></li>
+					      <li class="<?= ($w_current_route == 'security_logout') ? 'active' : ''; ?>"><a href="<?php echo $this->url('security_logout'); ?>"><i class="fa fa-user" aria-hidden="true"></i> Déconnexion</a></li>
 					<?php } else { ?>
-						<li class="pull-left <?= ($w_current_route == 'security_login') ? 'active' : ''; ?>"><a href="<?php echo $this->url('security_login'); ?>"><i class="fa fa-user" aria-hidden="true"></i> Connexion</a></li>
+						<li class="<?= ($w_current_route == 'security_login') ? 'active' : ''; ?>"><a href="<?php echo $this->url('security_login'); ?>"><i class="fa fa-user" aria-hidden="true"></i> Connexion</a></li>
 					<?php } ?>
 						  <li <?= ($w_current_route == 'default_home') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_home'); ?>">Accueil</a></li>
 					      <li><a href="#">A propos</a></li>						
 						  <li <?= ($w_current_route == 'default_contact') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_contact'); ?>">Contact</a></li>
-					      <li class="pull-right"><a href="#">Panier <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+					      <li><a href="#">Panier <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 					      <?php if ($w_user['role'] === 'admin') { ?>
-						  <li class="pull-right"><a href="<?php echo $this->url('menus_gestion'); ?>">Gestion</a></li>
+						  <li><a href="<?php echo $this->url('menus_gestion'); ?>">Gestion</a></li>
 						  <?php } ?>
 					    </ul>
 					</div>
 				</div>
 			</nav>
-		</header>
-
+			
+	<div class="container text-center">
+	<?php if ($w_current_route == 'default_home') { ?>
+		<figure><img src="../public/assets/img/logo.png" alt="logo" class="logo"></figure>
+		
+		<form class="navbar-form" role="search">
+			<button type="submit" class="btn btn-default"><a href="<?php echo $this->url('default_home'); ?>">VOIR LES MENUS</a></button>
+		</form>
+		<?php } else { ?>
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
+		<?php } ?>
+	</div>
 
-		<footer>
-			<br/><br/><br/>
-			<div class="col-md-3 col-md-offset-1">
-	        <p>&copy;opyright FlyEat 2017</p>
-	      </div>
-	      <div class="col-md-4">
-	      	<p>Informations : <a href="tel:+33320651201">03.20.65.12.01</a> & <a href="tel:+33783489480">07.83.48.94.80</a></p>
-	      </div>
-	      <div class="col-md-4 logo">
-	      	<ul class="list-inline">
-	      		<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-	      		<li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-	      		<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-	      		<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-	      	</ul>
-	      </div>
-	      <div>
-	      	
-	      </div>
+			<!-- Image en position Absolute -->
+			<img src="../public/assets/img/assiette.png" class="img_absolute img-responsive">
+			<img src="../public/assets/img/sushis.png" class="img_absolute2 img-responsive">
+		</header>
+<?php if ($w_current_route == 'default_home') { ?>
+	<section>
+			<?= $this->section('main_content') ?>
+		</section>
+		<?php } ?>
+		<footer class="text-center">
+		<div>
+	        <p>Copyright FlyEat 2017</p>
+	    </div>
 		</footer>
 </body>
 </html>

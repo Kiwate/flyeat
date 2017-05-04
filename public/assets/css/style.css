@@ -1,21 +1,13 @@
 html, body {
 	font-family: Consolas, monaco, monospace;
-	background-color: #f7efdd;
-	color: #000;
+	background-color: white;
+	color: black;
+	font-family: 'Josefin Slab', serif;
 }
 
 a {
 	text-decoration: none;
 	color: #A6E22E;
-}
-
-article .search{
-	height: 600px;
-}
-
-.search form{
-	position: relative;
-	top: 50%;
 }
 
 a:hover {
@@ -35,41 +27,246 @@ h2 {
   text-align: center;
 }
 
+
 .navbar-default {
 	background-color: transparent;
 	border-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-	color: #666;
+	color: #FFF;
 	background-color: transparent;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #999;
+	color: #757267;
 }
 
 .navbar-nav > li {
   float: none;
   display: inline-block;
+	margin: 1rem 3rem;
+	font-size: 18px;
 }
 
-.search input {
-	margin-right:-9px;
-	border-radius: 0;
+header{
+	background-image: url(../img/Backgroundheader.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 98rem;
 }
 
-.search button {
-	border-radius: 0;
-	background-color: #777366;
-	color: #FFF;
+.form-control{
+	height: 50px;
+  border-radius: 0px;
 }
 
-.search button:hover, .search button:active, .search button:focus {
-	background-color: #444;
-	color: #FFF;
+.navbar-form{
+	padding-top: 3rem;
+  margin-left: -3rem;
 }
 
-.search button:focus {
-		border:0;
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default {
+    background-color: transparent;
+    color: #757267;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #757267;
+	  letter-spacing: 1px;
+}
+
+.navbar-form a{
+    color: white;
+		font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.navbar-form a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #757267;
+    background-color: transparent;
+}
+
+.logo{
+	margin-top: 28rem;
+}
+
+header .btn{
+    height: 5rem;
+    width: 28rem;
+		border-radius:0;
+		margin-left: 4rem;
+		background-color: #757267;
+	  color: white;
+}
+
+.btn-default:hover{
+		color: #fff;
+	  background-color: #757267;
+}
+
+.navbar-form .form-control{
+		width: 28rem;
+}
+
+
+.img_absolute{
+	margin-top: 18rem;
+	margin-left: -6rem;
+}
+
+.img_absolute2{
+	margin-top: -31rem;
+	float: right;
+}
+
+.separator{
+  margin-top: 13rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#services{
+  padding: 9% 0%;
+}
+
+#services h2{
+	color:#1ea59d;
+	font-weight: bold;
+}
+
+#services p{
+	line-height: 4rem;
+	padding-top: 2rem;
+}
+
+#services .btn{
+    height: 5rem;
+    width: 28rem;
+		border-radius:0;
+		background-color: #757267;
+	  color: white;
+    margin-top: 2rem;
+}
+
+#menus{
+	padding-bottom: 12%;
+	background-color: #cf7961;
+  margin-top: 10%;
+}
+
+.separator2{
+	margin-top: 2rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menus h2{
+	color:white;
+	font-weight:bold;
+}
+
+#menus p{
+	color:white;
+  padding-top: 1%;
+}
+
+.drone2{
+	margin-top: -12rem;
+	margin-left: -5rem;
+}
+
+.top{
+	margin-top: 10rem;
+}
+
+.height_img{
+	height: 22rem;
+	margin-top: 6rem;
+}
+
+.img_plat{
+  margin-top: 8rem;
+}
+
+
+/* Formulaire */
+
+
+.contact_margin{
+  margin-top: 8rem;
+}
+
+.form-control{
+  border: 1px solid #d6d4d4;
+  border-radius: 0px;
+}
+
+.form-group{
+	margin-top: 38px;
+}
+
+.btn{
+  border-radius: 0px;
+  border: 0px;
+}
+
+.btn-primary{
+  background-image: linear-gradient(to bottom,#757267,#757267 100%);
+}
+
+.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+  text-shadow: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+      background-color: #757267;
+      background-position: 0 -31px;
+      color: white;
+      border: 1px solid #757267;
+}
+
+#contact{
+    background-color: #F7EFDD;
+}
+
+#contact h2{
+		color:#1ea59d;
+		font-weight: bold;
+}
+
+#contact form{
+	  margin-top: 7rem;
+}
+
+footer{
+    padding-top:30rem;
+    height: 150px;
+}
+
+.login {
+	padding-top: 19rem;
+}
+header .login .btn {
+	margin-left: 0;
+}
+section {
+	padding-top: 9rem;
+}
+
+.subscribe {
+	padding-top: 3rem;
+	font-size:18px;
+}
+
+.nav .nav-pills {
+	padding-top: 9rem;
 }

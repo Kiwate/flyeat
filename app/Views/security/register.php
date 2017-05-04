@@ -2,7 +2,6 @@
 
 <?php $this->start('main_content'); ?>
 
-<?php var_dump($messages); ?>
 <div class="container">
     <?php if (!empty($messages)) {
             if (!isset($messages['success'])){
@@ -17,7 +16,7 @@
         } 
     ?>
     <div class="row">
-        <form action="" method="POST" class="col-md-5">
+        <form action="" method="POST" class="col-md-4 col-md-offset-4">
             <div class="form-group">
                 <label class="control-label" for="firstname">Prénom :</label>
                 <input type="text" name="firstname" id="firstname" class="form-control" value="">

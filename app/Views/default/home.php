@@ -4,24 +4,15 @@
 
 
 <article class="container-fluid">
-<div class="container text-center search">
-	<figure><img src=""></figure>
-			
-	<form class="navbar-form" role="search">
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Recherche">
-		</div>
-		<button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
-	</form>
-</div>
+	
 
 			<!-- Image en position Absolute -->
 			<img src="">
 			<img src="">
 	<!-- Trait de séparation -->
-	<figure><img src=""></figure>
+	<figure><img src="../public/assets/img/separator1.png" class="separator"></figure>
 
-	<div class="row">
+	<div class="row" id="services">
 		<div class="col-md-4 col-md-offset-2">
 			<h2>At vero eos :</h2>
 			<br/>
@@ -30,43 +21,63 @@
 			<button class="btn btn-default">Lire la suite</button>
 		</div>
 		<div class="col-md-6">
-			<figure class="img-responsive">
-				<img src="">
+			<figure>
+				<img src="../public/assets/img/drone.png" class="img-responsive">
 			</figure>
 		</div>
 	</div>
 
-	<!-- Image entre les deux articles -->
-	<figure>
-		<img src="">
-	</figure>
 </article>
 
-<article class="container-fluid">
-	<!-- Trait de séparation -->
-	<figure><img src=""></figure>
 
-	<div class="text-center">
-		<h2>Nous livrons chez vous :</h2>
-		<br/>
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed da eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-	</div>
+	<!-- Formulaire -->
 
-	<!-- Images superposées -->
-	<figure>
-		<img src="">
-	</figure>
-	<figure>
-		<img src="">
-	</figure>
-	<figure>
-		<img src="">
-	</figure>
+				<?php if (!empty($_POST)) {
+					$name = $_POST['name'];
+					$email = $_POST['email'];
+					$message = $_POST['message'];
 
-	<!-- Image de gauche -->
-	<figure>
-		<img src="">
-	</figure>
-	
-</article>
+						// echo $name;
+						// echo $email;
+						// echo $message;
+
+						mail('', $name, $message."  ".$email);
+				} ?>
+
+
+		<div class="container-fluid" id="contact">
+
+				<figure><img src="../public/assets/img/separator1.png" class="separator"></figure>
+
+				<div class="row contact_margin">
+							<div class="col-md-8 col-md-offset-2">
+											<h2 class="text-center">Nous livrons chez vous :</h2>
+									<form name="sentMessage" method="POST" id="contact">
+											<div class="control-group form-group">
+													<div class="controls">
+															<!-- <label>Full Name:</label> -->
+															<input type="text" class="form-control" id="name" name="name" placeholder="Full name" required="" data-validation-required-message="Please enter your name." aria-invalid="false" required>
+															<p class="help-block"></p>
+													</div>
+											</div>
+											<div class="control-group form-group">
+													<div class="controls">
+															<!-- <label>Email Address:</label> -->
+															<input type="email" class="form-control" id="email" name="email"  placeholder="Email" required="" data-validation-required-message="Please enter your email address." required>
+													<div class="help-block"></div></div>
+											</div>
+											<div class="control-group form-group">
+													<div class="controls">
+															<!-- <label>Message:</label> -->
+															<textarea rows="10" cols="100" class="form-control" placeholder="Messages" name="message" id="message" required="" data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" required></textarea>
+													<div class="help-block"></div></div>
+											<div id="success"></div>
+											<!-- For success/fail messages -->
+												<button type="submit" class="btn btn-primary">Envoyer</button>
+									</form>
+
+							</div>
+
+					</div>
+			</div>
 <?php $this->stop('main_content') ?>
